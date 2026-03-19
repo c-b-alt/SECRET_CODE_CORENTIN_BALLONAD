@@ -25,7 +25,8 @@
   max-width: 800px;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 32px;
   background-color: var(--foreground);
   padding: 120px 60px;
 }
@@ -61,16 +62,15 @@
   color: var(--text-primary);
 }
 
-.ctas {
+.secretSection {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  gap: 16px;
   width: 100%;
   max-width: 440px;
-  gap: 16px;
-  font-size: 14px;
 }
 
-.ctas a {
+button.primary {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -82,27 +82,32 @@
   cursor: pointer;
   width: fit-content;
   font-weight: 500;
+  font-size: 14px;
 }
 
-a.primary {
+button.primary {
   background: var(--text-primary);
   color: var(--background);
   gap: 8px;
 }
 
-a.secondary {
-  border-color: var(--button-secondary-border);
+.secretValue {
+  margin: 0;
+  color: var(--text-primary);
+  font-size: 18px;
+  line-height: 28px;
+  overflow-wrap: anywhere;
+}
+
+.error {
+  margin: 0;
+  color: #c1121f;
 }
 
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
-  a.primary:hover {
+  button.primary:hover {
     background: var(--button-primary-hover);
-    border-color: transparent;
-  }
-
-  a.secondary:hover {
-    background: var(--button-secondary-hover);
     border-color: transparent;
   }
 }
